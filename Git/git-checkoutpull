@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ "$1" = "" ]; then
+	echo "Need branch name as parameter"
+else
+	echo "Checking out $1"
+	git fetch
+	git checkout $1
+	git pull
+fi
